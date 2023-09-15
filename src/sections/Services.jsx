@@ -4,9 +4,9 @@ import ServiceCard from '../components/ServiceCard'
 
 export default function Services() {
   return (
-    <section className='max-container flex justify-center flex-wrap gap-6'>
+    <section className='max-container flex flex-col sm:flex-row justify-center flex-wrap gap-6'>
       {services.map((service) => (
-        <ServiceCard />
+        <ServiceCard key={service.label} {...service} />
       ))}
     </section>
   )
